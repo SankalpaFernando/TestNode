@@ -1,0 +1,20 @@
+---
+application:
+  name: "testnode"
+  project: "testing-app-123"
+  organization: "QoveryCommunity"
+  storage:
+  - name: "images"
+    size: "10"
+    type: "ssd"
+    mount_point: "/mnt/images"
+databases:
+- type: "MYSQL"
+  name: "lms_db"
+  version: "8.0"
+routers:
+- name: "main-testnode"
+  routes:
+  - application_name: "testnode"
+    paths:
+    - "/*"
